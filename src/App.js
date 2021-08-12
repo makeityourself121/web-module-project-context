@@ -16,10 +16,11 @@ function App() {
 		// add the given item to the cart
 		setCart([...cart, item])
 	};
+	
 
 	return (
 		<ProductContext.Provider value={{ products, addItem }}>
-			<CartContext.Provider value={cart}>
+			<CartContext.Provider value={{cart, setCart}}>
 		<div className="App">
 			<Navigation cart={cart} />
 
